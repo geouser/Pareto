@@ -348,7 +348,7 @@ function launchParticlesJS(tag_id, params) {
                 pJS.interactivity.mouse.pos_y = e.pageY * 2;
             } else {
                 pJS.interactivity.mouse.pos_x = e.pageX;
-                pJS.interactivity.mouse.pos_y = e.pageY - 250;
+                pJS.interactivity.mouse.pos_y = e.pageY - $(window).height() / 1.3;
             }
             pJS.interactivity.status = 'mousemove';
         }
