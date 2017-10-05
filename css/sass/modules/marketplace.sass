@@ -1,0 +1,56 @@
+.marketplace-section
+	background-image: url(../images/lines.png) 
+	background-position: 50% 100%
+	background-size: 100% 
+	background-repeat: no-repeat 
+
+	.wide-title
+		h2
+			color: $blue
+		.subtitle
+			color: $green
+			
+
+
+.reviews-block
+	position: relative
+	height: 420px 
+	
+
+
+.review
+	position: absolute
+	width: 212px;
+	box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.15);
+	background-color: #FFF
+	color: $blue
+	font-weight: 700  
+	line-height: 1.5 
+	border-radius: 8px
+	padding: 15px
+	
+	&:after
+		content: ''
+		width: 0
+		height: 0
+		border-style: solid
+		border-width: 4px 6px 4px 0
+		border-color: transparent #ffffff transparent transparent
+		position: absolute
+		right: 100%
+		bottom: 20px
+		transform: translateY(50%)
+		
+	&__avatar
+		width: 46px
+		height: 46px
+		border-radius: 50%
+		overflow: hidden
+		position: absolute
+		bottom: 20px
+		left: -60px 
+		transform: translateY(50%)
+		
+		img
+			display: block
+			width: 100%

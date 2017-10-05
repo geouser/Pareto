@@ -76,6 +76,20 @@ jQuery(document).ready(function($) {
         return false;
     });
 
+
+    /*---------------------------
+                                    Accordeon
+    ---------------------------*/
+    $('.js-faq-handler').on('click', function(event) {
+        event.preventDefault();
+        var content = $(this).siblings('.faq-item-content');
+        $('.js-faq-handler').not($(this)).removeClass('is-open');
+        $('.faq-item-content').not(content).slideUp();
+        $(this).toggleClass('is-open');
+        content.slideToggle();
+    });
+
+
     /*---------------------------
                                   MENU TOGGLE
     ---------------------------*/
