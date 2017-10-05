@@ -91,6 +91,45 @@ jQuery(document).ready(function($) {
 
 
     /*---------------------------
+                                    Timer
+    ---------------------------*/
+    var endDate = new Date( $('.timer').attr('data-end') );
+    $('.timer').countdown({
+        until: endDate,
+        padZeroes: true,
+        format: 'dHMS',
+        layout: '<span class="timer-section">'+
+                    '<span class="timer-digits">'+
+                        '<span>{d10}</span>'+
+                        '<span>{d1}</span>'+
+                    '</span>'+
+                    '<span class="timer-section-label">{dl}</span>'+
+                '</span>'+
+                '<span class="timer-section">'+
+                    '<span class="timer-digits">'+
+                        '<span>{h10}</span>'+
+                        '<span>{h1}</span>'+
+                    '</span>'+
+                    '<span class="timer-section-label">{hl}</span>'+
+                '</span>'+
+                '<span class="timer-section">'+
+                    '<span class="timer-digits">'+
+                        '<span>{m10}</span>'+
+                        '<span>{m1}</span>'+
+                    '</span>'+
+                    '<span class="timer-section-label">{ml}</span>'+
+                '</span>'+
+                '<span class="timer-section">'+
+                    '<span class="timer-digits">'+
+                        '<span>{s10}</span>'+
+                        '<span>{s1}</span>'+
+                    '</span>'+
+                    '<span class="timer-section-label">{sl}</span>'+
+                '</span>'
+    }); 
+
+
+    /*---------------------------
                                   MENU TOGGLE
     ---------------------------*/
     $('.js-toggle-menu').on('click', function(event) {

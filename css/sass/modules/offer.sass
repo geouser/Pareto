@@ -1,0 +1,132 @@
+.offer
+	overflow: hidden
+
+	.content
+		background: linear-gradient(to bottom, $green 0%, $blue 100%);
+		padding: 150px 0 30px
+		position: relative
+		z-index: 1 
+		
+		
+		&:after
+			content: ''
+			width: 619px
+			height: 575px
+			background-image: url(../images/star.svg)
+			background-position: 50% 50%
+			background-repeat: no-repeat
+			background-size: 100%
+			position: absolute 
+			top: 45%
+			left: 65%
+			transform: translate(-50%, -50%) 
+			z-index: -1 
+	
+	svg
+		display: block
+		
+		.offer-wave
+			fill: $blue
+
+.site-moto
+	color: #fff
+	padding-right: 100px 
+	
+	img
+		margin-bottom: 25px
+		display: block 
+	
+	h1
+		font-size: 25px 
+		
+
+
+.sign-up-form
+	padding-left: 50px 
+	color: #fff
+	
+	&__title
+		margin-bottom: 25px
+		font-size: 27px
+		font-weight: 700  
+		
+
+	.form-group
+		width: 375px
+		max-width: 100% 
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		
+	
+	input
+		width: 280px
+		background-color: #fff
+		border-radius: 4px
+		border: 0
+		padding: 0 20px
+		height: 43px
+		font-size: 15px
+		color: $green
+		box-shadow: 0px 4px 0px 0px #2E8165
+		
+
+	.submit-button
+		width: 75px 
+		height: 43px
+		border: 0
+		border-radius: 4px
+		background-color: #CA5151
+		color: #fff 
+		box-shadow: 0px 4px 0px 0px #A14242
+		cursor: pointer
+		margin-top: 0 
+		font-size: 16px
+		font-weight: 700  
+		
+		&:hover
+			box-shadow: 0px 5px 0px 0px #A14242
+			margin-top: -1px 
+			
+		&:focus,
+		&:active
+			box-shadow: 0px 3px 0px 0px #A14242
+			margin-top: 1px 
+		
+		
+
+
+.timer
+	margin: 0 -25px
+	display: flex
+	flex-wrap: wrap
+	padding-top: 135px 
+	
+	&-section
+		width: 25%
+		padding: 0 25px
+		
+		&-label
+			display: block
+			font-size: 20px
+			color: #fff
+			text-transform: uppercase 
+			text-align: center
+			padding-top: 35px 
+		
+	&-digits
+		display: flex
+		justify-content: space-between
+		
+		span
+			display: inline-block
+			width: 122px
+			max-width: 48% 
+			background-color: #fff 
+			font-size: 70px
+			font-weight: 700 
+			color: $green  
+			text-align: center
+			border-radius: 6px
+			padding: 30px 0
+			box-shadow: 0px 0px 50px 0px rgba(90, 173, 216, 0.35);
