@@ -40,6 +40,37 @@ jQuery(document).ready(function($) {
         });
     });
 
+particlesJS('particles-js', {
+  canvas: {
+    color_hex_bg: '#3E3E3E',
+    opacity: 1
+  },
+  particles: {
+    color: '#3E3E3E',
+    color_hex: '#3E3E3E',
+    opacity: .8,
+    size: 4,
+    size_random: true,
+    nb: 240,
+    anim: {
+      speed: 1.5
+    },
+    line_linked: {
+        enable_auto: true,
+        distance: 120,
+        color: '#3E3E3E',
+        opacity: .8,
+        width: 1,
+        condensed_mode: {
+          enable: true,
+          rotateX: 65000,
+          rotateY: 65000
+        }
+      }
+  },
+  retina_detect: true
+});
+
 
 
     /*---------------------------
