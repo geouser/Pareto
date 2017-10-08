@@ -1,7 +1,9 @@
 #green-top-wave
 	fill: #6BBE49
+	margin-bottom: -3px 
 #green-bottom-wave
 	fill: #5A932D
+	margin-top: -3px 
 	
 #green-top-wave,
 #green-bottom-wave
@@ -11,6 +13,8 @@
 .description-section
 	position: relative
 	z-index: 2 
+	overflow: hidden
+	
 	.content
 		background: linear-gradient(to bottom, rgba(106,190,73,1) 0%, rgba(89,147,45,1) 100%)
 		padding: 60px 0
@@ -28,6 +32,16 @@
 	padding: 45px 35px
 	position: relative
 	z-index: 1 
+	
+	@media (max-width: 1200px)
+		width: 400px
+		padding: 35px 20px
+		
+	@media (max-width: 991px)
+		width: 100%
+		
+		&:not(:last-child)
+			margin-bottom: 60px 
 	
 	&:after
 		content: ''
@@ -52,12 +66,27 @@
 		margin-top: -85px
 		left: 650px 
 		
+		@media (max-width: 1200px)
+			left: 500px
+			margin-top: -96px 
+			
+		@media (max-width: 991px)
+			left: 0
+			margin-top: 0  
+		
 		.number:after
 			transform: translate(-50%, -50%) rotate(90deg)
 	
 	&:nth-child(3)
 		margin-top: -135px
 		left: 100px 
+		
+		@media (max-width: 1200px)
+			left: 35px 
+			
+		@media (max-width: 991px)
+			left: 0
+			margin-top: 0  
 		
 		.number:after
 			transform: translate(-50%, -50%) rotate(180deg)
@@ -70,6 +99,9 @@
 		flex-wrap: wrap
 		margin-bottom: 35px 
 		
+		@media (max-width: 767px)
+			margin-bottom: 20px 
+		
 		.number
 			width: 40px
 			height: 28px
@@ -81,6 +113,7 @@
 			font-weight: 700 
 			margin-bottom: 15px   
 			margin-top: 5px 
+			
 			
 			&:after
 				content: ''
@@ -102,6 +135,10 @@
 			color: $blue-green  
 			font-size: 18px
 			line-height: 1.5 
+			
+			@media (max-width: 767px)
+				padding-left: 20px
+				font-size: 16px  
 				
 
 	&__content
@@ -110,6 +147,9 @@
 		
 		p:not(:last-child)
 			margin-bottom: 1.5em 
+			
+			@media (max-width: 767px)
+				margin-bottom: 1.25em 
 		
 
 
@@ -120,6 +160,11 @@
 	margin-left: 212px
 	margin-top: -225px 
 	top: 50% 
+	
+	@media (max-width: 1200px)
+		margin-left: 140px
+		height: 350px
+		margin-top: -175px  
 	
 	>span:nth-child(2)
 		border-bottom: 13px solid transparent
@@ -132,6 +177,9 @@
 	height: 568px
 	margin-left: 2px 
 	top: -80px  
+	
+	@media (max-width: 1200px)
+		height: 551px
 	
 	>span:nth-child(2)
 		border-top: 13px solid transparent
@@ -149,6 +197,9 @@
 	margin-top: -170px 
 	margin-left: 163px 
 	
+	@media (max-width: 1200px)
+		margin-left: 105px 
+	
 	>span:nth-child(2)
 		border-top: 13px solid transparent
 	>span:nth-child(1)
@@ -162,6 +213,9 @@
 	width: 26px
 	z-index: -1 
 	opacity: 0.5
+	
+	@media (max-width: 991px)
+		display: none
 
 .data-drips>span
 	overflow: hidden

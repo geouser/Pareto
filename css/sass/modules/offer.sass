@@ -1,3 +1,6 @@
+#offer-wave
+	margin-top: -2px 
+
 .offer
 	overflow: hidden
 
@@ -7,6 +10,12 @@
 		position: relative
 		z-index: 1 
 		
+		@media (max-width: 991px)
+			padding-top: 50px 
+			margin-top: 66px 
+			
+		@media (max-width: 767px)
+			margin-top: 56px 
 		
 		&:after
 			content: ''
@@ -21,23 +30,32 @@
 			left: 65%
 			transform: translate(-50%, -50%) 
 			z-index: -1 
-	
-	svg
-		display: block
-		
-		.offer-wave
-			fill: $blue
 
 .site-moto
 	color: #fff
 	padding-right: 100px 
 	
+	@media (max-width: 991px)
+		text-align: center
+		padding-right: 0 
+		padding-bottom: 50px 
+	
 	img
 		margin-bottom: 25px
 		display: block 
+		
+		@media (max-width: 991px)
+			margin-left: auto 
+			margin-right: auto 
 	
 	h1
 		font-size: 25px 
+		
+		@media (max-width: 767px)
+			font-size: 22px
+		
+		@media (max-width: 575px)
+			font-size: 20px 
 		
 
 
@@ -45,10 +63,23 @@
 	padding-left: 50px 
 	color: #fff
 	
+	@media (max-width: 991px)
+		padding-left: 0
+		text-align: center 
+	
 	&__title
 		margin-bottom: 25px
 		font-size: 27px
 		font-weight: 700  
+		
+		@media (max-width: 767px)
+			font-size: 20px
+			font-weight: normal
+			margin-bottom: 15px
+		
+		@media (max-width: 575px)
+			font-size: 18px
+			
 		
 
 	.form-group
@@ -57,6 +88,13 @@
 		display: flex
 		flex-wrap: wrap
 		justify-content: space-between
+		
+		@media (max-width: 991px)
+			margin-left: auto 
+			margin-right: auto 
+			
+		@media (max-width: 575px)
+			width: 290px
 		
 	
 	input
@@ -69,6 +107,9 @@
 		font-size: 15px
 		color: $green
 		box-shadow: 0px 4px 0px 0px #2E8165
+		
+		@media (max-width: 575px)
+			width: 230px
 		
 
 	.submit-button
@@ -83,6 +124,9 @@
 		margin-top: 0 
 		font-size: 16px
 		font-weight: 700  
+		
+		@media (max-width: 575px)
+			width: 50px
 		
 		&:hover
 			box-shadow: 0px 5px 0px 0px #A14242
@@ -102,9 +146,26 @@
 	flex-wrap: wrap
 	padding-top: 135px 
 	
+	@media (max-width: 1200px)
+		margin: 0 -15px
+		padding-top: 100px 
+		
+	@media (max-width: 767px)
+		margin: 0 -10px
+		padding-top: 75px
+		
+	@media (max-width: 575px)
+		padding-top: 50px 
+	
 	&-section
 		width: 25%
 		padding: 0 25px
+		
+		@media (max-width: 1200px)
+			padding: 0 15px
+			
+		@media (max-width: 767px)
+			padding: 0 10px
 		
 		&-label
 			display: block
@@ -113,10 +174,32 @@
 			text-transform: uppercase 
 			text-align: center
 			padding-top: 35px 
+			
+			@media (max-width: 1200px)
+				font-size: 18px
+				padding-top: 25px  
+				
+			@media (max-width: 991px)
+				font-size: 16px
+				padding-top: 20px  
+				
+			@media (max-width: 767px)
+				font-size: 14px
+				padding-top: 15px  
+				
+			@media (max-width: 575px)
+				font-size: 12px 
 		
 	&-digits
 		display: flex
 		justify-content: space-between
+		
+		@media (max-width: 575px)
+			display: block
+			background-color: #fff
+			border-radius: 6px 
+			box-shadow: 0px 0px 50px 0px rgba(90, 173, 216, 0.35);
+			text-align: center
 		
 		span
 			display: inline-block
@@ -130,3 +213,26 @@
 			border-radius: 6px
 			padding: 30px 0
 			box-shadow: 0px 0px 50px 0px rgba(90, 173, 216, 0.35);
+			
+			@media (max-width: 575px)
+				background-color: transparent 
+				box-shadow: none
+				width: auto
+				max-width: 100% 
+			
+			@media (max-width: 1200px)
+				font-size: 60px
+				padding: 20px 0
+				
+			@media (max-width: 991px)
+				font-size: 50px
+				padding: 15px 0 
+				
+			@media (max-width: 767px)
+				font-size: 40px
+				padding: 12px 0
+				
+			@media (max-width: 575px)
+				font-size: 30px
+				padding: 15px 0 
+			

@@ -123,6 +123,18 @@ particlesJS('particles-js', {
 
 
     /*---------------------------
+                                    Fade-in-reviews
+    ---------------------------*/
+    $('.review').each(function(index, el) {
+        $(this).delay(2000 * index).queue(function(next){
+            $(this).addClass('is-visible')
+            next();
+        });
+    });
+
+
+
+    /*---------------------------
                                     Timer
     ---------------------------*/
     var endDate = new Date( $('.timer').attr('data-end') );
@@ -235,51 +247,5 @@ particlesJS('particles-js', {
         });
     });
 
-
-
-    /*---------------------------
-                                  Google map init
-    ---------------------------*/
-    var map;
-    function googleMap_initialize() {
-        var lat = $('#map_canvas').data('lat');
-        var long = $('#map_canvas').data('lng');
-
-        var mapCenterCoord = new google.maps.LatLng(lat, long);
-        var mapMarkerCoord = new google.maps.LatLng(lat, long);
-
-        var styles = [];
-
-        var mapOptions = {
-            center: mapCenterCoord,
-            zoom: 16,
-            //draggable: false,
-            disableDefaultUI: true,
-            scrollwheel: false,
-            mapTypeId: google.maps.MapTypeId.ROADMAP
-        };
-
-        map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
-
-        var styledMapType=new google.maps.StyledMapType(styles,{name:'Styled'});
-        map.mapTypes.set('Styled',styledMapType);
-        map.setMapTypeId('Styled');
-
-        var markerImage = new google.maps.MarkerImage('images/location.png');
-        var marker = new google.maps.Marker({
-            icon: markerImage,
-            position: mapMarkerCoord, 
-            map: map,
-            title:"Site Title"
-        });
-        
-        $(window).resize(function (){
-            map.setCenter(mapCenterCoord);
-        });
-    }
-
-    if ( exist( '#map_canvas' ) ) {
-        googleMap_initialize();
-    }
 
 }); // end file

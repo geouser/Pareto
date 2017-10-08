@@ -2,9 +2,18 @@
 	padding: 100px 0 40px
 	text-align: center
 	
+	@media (max-width: 1200px)
+		padding: 60px 0 30px
+	
 	&-partners,
 	&-apps
 		margin-bottom: 70px
+		
+		@media (max-width: 1200px)
+			margin-bottom: 60px 
+			
+		@media (max-width: 767px)
+			margin-bottom: 40px 
 		 
 		h4
 			color: $blue
@@ -12,10 +21,19 @@
 			font-weight: 700  
 			margin-bottom: 35px 
 			
+			@media (max-width: 1200px)
+				font-size: 28px
+				margin-bottom: 30px  
+				
+			@media (max-width: 767px)
+				font-size: 24px
+				margin-bottom: 15px  
+			
 		&__row
 			display: flex
 			align-items: center
 			justify-content: center
+			flex-wrap: wrap
 		
 	.copyright
 		font-size: 15px 
@@ -23,6 +41,25 @@
 	&-partners
 		a
 			margin: 0 30px;
+			
+			@media (max-width: 1200px)
+				margin: 0 20px
+				
+				img
+					max-width: 120px 
+					
+			@media (max-width: 767px)
+				margin: 0 15px
+				
+				img
+					max-width: 100px 
+					
+			@media (max-width: 575px)
+				margin: 8px
+				
+				img
+					max-width: 80px 
+				
 			
 			&:first-child
 				margin-left: 0
@@ -41,6 +78,14 @@
 	margin: 0 17px
 	transition: all 0.3s ease
 	position: relative
+	
+	@media (max-width: 1200px)
+		width: 46px
+		height: 46px
+		margin: 0 10px
+		
+	@media (max-width: 767px)
+		margin: 8px
 	
 	&:after
 		content: ''
@@ -61,10 +106,11 @@
 		height: 120%
 		opacity: 0.25
 	
-	&:first-child
-		margin-left: 0
-	&:last-child
-		margin-right: 0 
+	@media (min-width: 768px)
+		&:first-child
+			margin-left: 0
+		&:last-child
+			margin-right: 0 
 	
 	.fa
 		color: #fff
